@@ -17,6 +17,23 @@ public class Goddess {
     private Date update_date;
     private  Integer isdel;
 
+    @Override
+    public String toString() {
+        return "Goddess{" +
+                "id=" + id +
+                ", user_name='" + user_name + '\'' +
+                ", sex=" + sex +
+                ", age=" + age +
+                ", birthday=" + birthday +
+                ", email='" + email + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", create_user='" + create_user + '\'' +
+                ", update_user='" + update_user + '\'' +
+                ", create_date=" + create_date +
+                ", update_date=" + update_date +
+                ", isdel=" + isdel +
+                '}';
+    }
 
     public Integer getId() {
         return id;

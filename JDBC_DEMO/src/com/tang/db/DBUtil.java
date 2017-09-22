@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class DBUtil {
 
-    private  static final String URL="jdbc:mysql://127.0.0.1:3306/learn_java";
+    private  static final String URL="jdbc:mysql://127.0.0.1:3306/learn_java?userUnicode=true&characterEncoding=utf8";
     private  static final String USER="root";
     private  static final String PASSWORD="123456";
 

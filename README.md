@@ -12,6 +12,7 @@ https://github.com/ITnpc/Java_Test.git
 We recommend every repository include a README, LICENSE, and .gitignore.
 …or create a new repository on the command line
 
+
 echo "# Java_Test" >> README.md 
 
 git init 
@@ -38,12 +39,20 @@ You can initialize this repository with code from a Subversion, Mercurial, or TF
 
 
 echo "# test_test" >> README.md
+
 git init
+
 git add README.md
+
 git commit -m "first commit"
+
 git remote add origin https://github.com/ITnpc/test_test.git
+
 git push -u origin master
 
 
+
 git remote add origin https://github.com/ITnpc/test_test.git
+
 git push -u origin master
+

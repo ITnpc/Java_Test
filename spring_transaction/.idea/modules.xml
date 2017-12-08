@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring_transaction.iml" filepath="$PROJECT_DIR$/spring_transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trans_web/trans_web.iml" filepath="$PROJECT_DIR$/trans_web/trans_web.iml" />
+    </modules>
+  </component>
+</project>

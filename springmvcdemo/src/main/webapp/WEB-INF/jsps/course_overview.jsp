@@ -5,14 +5,14 @@
   Time: 17:16
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"  %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <html>
 <head>
-    <base href="<%=basePath%>">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>我不是真正的神经网</title>
     <link rel="stylesheet" href="<%=path%>/resources/css/main.css" type="text/css" />
 </head>

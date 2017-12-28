@@ -17,7 +17,7 @@ public class CourseServiceImpl implements CourseService{
 
         course.setCourseId(courseId);
         course.setTitle("深入浅出Java多线程");
-        course.setImgPath("resource/imgs/course-img.jpg");
+        course.setImgPath("resources/imgs/course-img.jpg");
         course.setLearningNum(12345);
         course.setLevel(2);
         course.setLevelDesc("中级");
@@ -38,7 +38,7 @@ public class CourseServiceImpl implements CourseService{
         chapter.setId(1);
         chapter.setCourseId(courseId);
         chapter.setOrder(1);
-        chapter.setTitle("第一章 多线程背景知识介绍");
+        chapter.setTitle("第1章 多线程背景知识介绍");
         chapter.setDescr("本章将介绍与多线程编程相关的背景概念");
         chapterList.add(chapter);
 

@@ -14,7 +14,8 @@
 <head>
     <base href="<%=basePath%>">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/main.css" type="text/css" />
-    <title>Title</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
 </head>
 <body>
 <div align="center">

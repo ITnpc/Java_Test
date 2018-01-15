@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="default2" namespace="/" extends="struts-default" strict-method-invocation="true">
+
+        <default-action-ref name="index"></default-action-ref>
+
+        <action name="index">
+            <result>/error.jsp</result>
+        </action>
+        
+        <action  name="*_*_*" method="{2}" class="com.tang.{3}.{1}Action" >
+            <result >/result.jsp</result>
+            <result name="add">
+                <param name="location">/${#request.path}.jsp</param>
+            </result>
+            <result name="update">/{2}.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+        <action  name="LoginAction" method="login" class="com.tang.action.LoginAction" >
+            <result >/success.jsp</result>
+            <result name="input">/login.jsp</result>
+        </action>
+
+
+    </package>
+
+</struts>

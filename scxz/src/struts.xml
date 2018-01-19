@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <!-- 设置默认编码集为UTF-8 -->
+    <constant name="struts.il8n.encoding" value="UTF-8" />
+    <constant name="struts.custom.i18n.resources" value="app" />
+    <!--设置开发者模式 -->
+    <constant name="struts.devMode" value="true" />
+    <!-- 当 struts的配置文件修改后，系统是否自动重新加载该文件，默认值为false（生 产环境下使用），开发阶段最好打开 -->
+    <constant name="struts.configuration.xml.reload" value="true" />
+
+    <constant name="struts.action.extension" value="action," />
+    <!-- 设置是否支持动态方法调用，true为支持，false不支持. -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+
+    <!-- 设置浏览器是否缓存静态内容,默认值为true(生产环境下使用),开发阶段最好关闭 -->
+    <constant name="struts.serve.static.browserCache" value="false" />
+    <constant name="struts.convention.default.parent.package" value="common"/>
+
+    <!--<include file="helloworld.xml"></include>-->
+
+    <!--<include file="timer.xml"></include>-->
+
+    <package name="default" namespace="/" extends="struts-default" >
+
+        <!--<interceptors>-->
+            <!--<interceptor name="mytimer" class="com.tang.interceptor.TimerInterceptor"></interceptor>-->
+        <!--</interceptors>-->
+
+        <!--<action name="timer" class="com.tang.action.TimerAction">-->
+            <!--<result>/success.jsp</result>-->
+            <!--&lt;!&ndash;引用拦截器&ndash;&gt;-->
+            <!--<interceptor-ref name="mytimer"></interceptor-ref>-->
+        <!--</action>-->
+
+        <action name="upload" class="com.tang.action.FileUploadAction">
+            <result>/fileupload.jsp</result>
+            <result name="input">/error.jsp</result>
+            <!--配置拦截器限制上传文件类型及大小-->
+            <interceptor-ref name="fileUpload">
+                <param name="allowedTypes">image/bmp,image/x-png,image/gif,image/jpeg</param>
+                <param name="maximumSize">2M</param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+        
+        <action name="download" class="com.tang.action.FileDownloadAction">
+            <param name="inputPath">/images/img2-lg.jpg</param>
+            <result name="success" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="inputName">inputStream</param>
+                <param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+                <param name="bufferSize">8192</param>
+            </result>
+        </action>
+
+    </package>
+
+
+
+
+</struts>
